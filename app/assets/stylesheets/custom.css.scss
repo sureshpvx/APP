@@ -1,0 +1,32 @@
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+
+.navbar {
+  background-color: black !important;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#home-container {
+  margin: 25px;
+  border-radius: 0.5rem;
+}
+
+.page {
+
+  background-image: asset-url('blogs.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 425px;
+}
