@@ -23,7 +23,7 @@ class ArticlesController < ApplicationController
       flash[:notice] = "Article was created successfully."
       redirect_to @article
     else
-      render 'new' ,status: 422
+      render 'new' ,status: 500
     end
   end
 
