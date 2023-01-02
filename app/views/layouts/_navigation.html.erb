@@ -22,6 +22,17 @@
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
+          <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Categories
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <% if logged_in? && current_user.admin? %>
+            <%= link_to "Create new category", new_category_path, class: "dropdown-item" %>
+          <% end %>  
+          <%= link_to "View categories", categories_path, class: "dropdown-item" %>
+        </div>
+      </li>
           <% if logged_in? %>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -30,7 +41,7 @@
           <ul class="dropdown-menu">
             <%= link_to "View your profile", user_path(current_user), class: "dropdown-item" %>
             <%= link_to "Edit your profile", edit_user_path(current_user), class: "dropdown-item" %>
-            <%= link_to "Delete profile", user_path(current_user), class: "dropdown-item text-danger",  data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'}, class: "btn btn-outline-danger" =%>
+            <%= link_to "Delete profile", user_path(current_user), class: "dropdown-item text-danger",  data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} =%>
 
           </ul>
         <li class="nav-item">

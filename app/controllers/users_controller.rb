@@ -36,7 +36,7 @@ class UsersController < ApplicationController
       flash[:notice] = "Welcome to the Alpha Blog #{@user.username}, you have successfully signed up"
       redirect_to articles_path
     else
-      render 'new' ,status: 500
+      render 'new' ,status: 422
     end
   end
 
